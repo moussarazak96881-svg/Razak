@@ -1,0 +1,59 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boite</title>
+    <style>
+        #container{
+            border: 1px,outset,#000;
+            padding: 5px;
+            width:400px;
+            height: 400px;
+            display: flex;
+            margin-top:10px;
+            margin-left: 30%;
+            box-shadow:3px 3px 3px gray,-3px -3px 3px gray;
+        }
+        .Boite{
+            font-size: 14px;
+            font-family: serif;
+            margin:5px;
+        }
+        .boite1{
+            width: 380px;
+            height:5%;
+            border:1px, solid, cyan;
+            justify-content: start;
+            padding-left: 15px;
+            margin-bottom: 5px;
+        }
+        .boite2{
+            width: 380px;
+            height:5%;
+            border:1px, solid, cyan;
+            justify-content: start;
+            padding-left: 15px;
+            margin-bottom: 150px;
+        }
+        p{
+            justify-content: center;
+            color: blueviolet;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+           
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="Boite">
+            <div class="boite1">Boite 1</div>
+            <div class="boite2">Boite 2</div>
+             <p>Ceci est un exercice pour maitriser  certaines outiles  
+            de la html et du css
+         </p>
+        </div>
+       
+    </div>
+</body>
+</html>
