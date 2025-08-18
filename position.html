@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+</head>
+<style>
+    #container{
+        border: 1px,solid,#000;
+        width: 50%;
+        height: 550px;
+        position: relative;
+        margin: auto;
+        margin-top:20px;
+        margin-right: 30%;
+        
+        
+    }
+    .boite1{
+        border:1px,solid #000;
+        width: 200px;
+        height: 40%;
+        background-color: green;
+        position: absolute;
+        margin-left: 68%;
+    }
+       .boite2{
+        border:1px,solid #000;
+        width: 200px;
+        height: 40%;
+        background-color: yellow;
+        position: absolute;
+        margin-left: 68%;
+        margin-top: 150px;
+        margin-left: 300px;
+        z-index: 10;
+    }
+        .boite3{
+        border:1px,solid #000;
+        width: 200px;
+        height: 40%;
+        background-color: red;
+        position: absolute;
+        margin-left: 68%;
+        margin-top: 330px;
+    }
+</style>
+<body>
+    <div id="container">
+        <div class="boite1"></div>
+        <div class="boite2"></div>
+        <div class="boite3"></div>
+    </div>
+</body>
+</html>
