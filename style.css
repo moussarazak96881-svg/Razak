@@ -1,478 +1,339 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+body{
+    padding: 0;
+    margin: 0 ;
 
-* {
+
+}
+/* ----------header---------*/
+#header{
+    position: sticky;   
+    margin: 0;
+    top: 0;
+    padding: 0;
+    height: 50px;
+    width: 100%;
+    background: grey;
+    border-radius: 10px;
+    position: fixed;
+    z-index: 50;
+   
+}
+nav ul{
+    
+    display: flex;
+    justify-content: end;
+    list-style-type: none;
+    column-gap: 20px;
+    padding-right: 20px;
+    margin-top: 0px;
+}
+li{
+    display: inline;
+    margin-top: 15px;
+}
+li a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: bisque;
+    padding: 8px;
+    border-radius: 10px;
+    
+}
+nav h1{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
-    scroll-behavior: smooth;
+    font-size: 24px;
+    float: left;
+    margin-left: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 10px;
 }
-
-.home-container {
-    min-height: 100vh;
-    background: url(images/bg.jpg);
-    background-size: cover;
+.souriant{
+    color: black;
+    font-weight: bold;
 }
-
-.header {
-    position: absolute;
+.dev{
+    color: bisque;
+    font-weight: bold;
+}
+.at{
+    color:bisque;
+    font-weight: bold;
+}
+/* -----body-----*/
+#corps{
+    z-index: 40px;
     width: 100%;
-    height: 150px;
-    display: flex;
-    align-items: center;
-    padding: 0 50px;
-}
-
-.logo {
-    width: 180px;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-}
-
-.nav-links li {
-    margin: 40px;
-    overflow: hidden;
-}
-
-.nav-links a {
-    font-size: 15px;
-    font-weight: 500;
-    color: white;
-    text-decoration: none;
-    position: relative;
-    display: block;
-    transition: transform 0.4s;
-}
-
-.nav-links a::before {
-    content: attr(data-text);
-    position: absolute;
-    top: 100%;
-}
-
-.nav-links a:hover {
-    transform: translateY(-100%);
-}
-
-.burger {
-    display: none;
-}
-
-.landing {
-    line-height: 80px;
-    min-height: 100vh;
+    margin: auto;
+    padding: 40px;
+    border-radius: 10px;
+    
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 0 100px;
-}
-
-.big-title {
-    width: 40%;
-    color: white;
-    font-size: 80px;
-    font-family: "Abril Fatface", cursive;
-    font-weight: 100;
-}
-
-.delivery-link {
-    line-height: 20px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    position: absolute;
-    bottom: 30px;
-    width: 70px;
-    justify-content: space-between;
-    overflow: hidden;
-}
-
-.scroll-text {
-    color: white;
-    position: relative;
-    transition: transform 0.4s;
-}
-
-.scroll-text::before {
-    content: attr(data-text);
-    position: absolute;
-    top: 100%;
-}
-
-.scroll-text:hover {
-    transform: translateY(-100%);
-}
-
-.scroll-icon {
-    font-size: 25px;
-    color: white;
-}
-
-.delivery-container {
-    min-height: 300px;
-    background: white;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.delivery-container div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.delivery-icon {
-    font-size: 50px;
-    color: #ADD981;
-}
-
-.delivery-container .box-content {
-    font-weight: 500;
-    font-size: 20px;
+    gap: 20px;
+    box-sizing: border-box;
     margin-top: 30px;
-    width: 220px;
+    background-color: white;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -40;
+    
+}
+/* ----------container1---------*/
+#container1{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.section1{
+    
+    border-radius: 10px;
+    border: 1px solid bisque;
+    height: 500px;
+    justify-content: start;
+}
+.section2{
+    background-color: bisque;
+    border-radius: 10px;
+    height: 500px;
+    box-sizing: border-box;
+    margin-right: 20px;
+    justify-content: end;
+}
+.content1{
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: bisque;
     text-align: center;
 }
-
-.best-sales-container {
-    min-height: 80vh;
-    background: white;
-    padding: 0 100px;
-}
-
-.section-title {
-    position: relative;
-    font-family: "Abril Fatface", cursive;
-    font-size: 50px;
-    font-weight: 100;
-}
-
-.section-title::before {
-    content: "";
-    position: absolute;
-    width: 50px;
-    height: 7px;
-    background: #ADD981;
-    bottom: 0;
-    box-shadow: 0 2px 2px #0000001F;
-}
-
-.best-plants {
-    display: flex;
-    margin-top: 50px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.plant1 {
-    background: url(images/nos_meilleures_ventes/1.jpg);
-}
-
-.plant2 {
-    background: url(images/nos_meilleures_ventes/2.jpg);
-}
-
-.plant3 {
-    background: url(images/nos_meilleures_ventes/3.jpg);
-}
-
-.plant4 {
-    background: url(images/nos_meilleures_ventes/4.jpg);
-}
-
-.plant-box::before {
-    content: "En savoir plus";
-    position: absolute;
+.section2 img{
     width: 100%;
     height: 100%;
-    background: #FFFFFFDF;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    left: -100%;
-    transition: left 0.4s;
-    font-size: 25px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+/* ----------l'acceuille---------*/
+.home, .about,.galerie,.contact{
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 18px;
     font-weight: 500;
-}
-
-.plant-box:hover::before {
-    left: 0;
-}
-
-.plant-bio {
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    background: #FFFFFFDF;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    flex-wrap: wrap;
-}
-
-.plant-name {
-    font-weight: 500;
-    font-size: 30px;
-}
-
-.plant-price {
-    font-weight: 300;
-    font-size: 15px;
-}
-
-.plants-container {
-    padding: 0 100px;
-    min-height: 150vh;
-    margin-top: 50px;
-}
-
-.grid-plants {
-    margin-top: 50px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 400px);
-}
-
-.plant-grid1 {
-    background: url(images/nos_plantes/1.jpg);
-    grid-column: 1 / 3;
-    grid-row: 1 / 3;
-}
-
-.plant-grid2 {
-    background: url(images/nos_plantes/2.jpg);
-    grid-column: 3 / 5;
-}
-
-.plant-grid3 {
-    background: url(images/nos_plantes/3.jpg);
-    grid-column: 3 / 5;
-}
-
-.plant-grid4 {
-    background: url(images/nos_plantes/4.jpg);
-    grid-column: 1;
-    grid-row: 3 / 5;
-}
-
-.plant-grid5 {
-    background: url(images/nos_plantes/5.jpg);
-    grid-column: 2 / 4;
-    grid-row: 3 / 5;
-}
-
-.plant-grid6 {
-    background: url(images/nos_plantes/6.jpg);
-    grid-column: 4;
-    grid-row: 3 / 5;
-}
-
-.plant-box {
-    position: relative;
-    background-size: cover;
-    background-position: center;
+    color: bisque;
+    text-shadow: none ;
+    text-transform: uppercase;
+    border: 1px solid bisque;
+    box-shadow: transparent;
     cursor: pointer;
+    transition: 0.5s;
+    user-select: none;
+    text-shadow: 2px 4px 8px black;
+    border-radius: 10px;
+}
+.home a,.about a, .galerie a,.contact a{
     text-decoration: none;
+    color: bisque;
+}
+.home:hover{
+    background-color: transparent;
+    text-shadow: 0 0 5px black;
+    border-radius: 10px;
+    color:cyan;
+    box-shadow: 0 0 10px grey, 0 0 40px grey, 0 0 80px bisque;
+    text-shadow: 0 0 5px grey, 0 0 10px bisque, 0 0 20px bisque;
+}
+.about:hover{
+    background-color: transparent;
+    text-shadow: 0 0 5px black;
+    border-radius: 10px;
+    color:cyan;
+    box-shadow: 0 0 10px grey, 0 0 40px grey, 0 0 80px bisque;
+    text-shadow: 0 0 5px grey, 0 0 10px bisque, 0 0 20px bisque;
+
+}
+.galerie:hover{
+    background-color: transparent;
+    text-shadow: 0 0 5px black;
+    border-radius: 10px;
+    color:cyan;
+    box-shadow: 0 0 10px grey, 0 0 40px grey, 0 0 80px bisque;
+    text-shadow: 0 0 5px grey, 0 0 10px bisque, 0 0 20px bisque;
+
+}
+.contact:hover{
+    background-color: transparent;
+    text-shadow: 0 0 5px black;
+    border-radius: 10px;
+    color:cyan;
+    box-shadow: 0 0 10px grey, 0 0 40px grey, 0 0 80px bisque;
+    text-shadow: 0 0 5px grey, 0 0 10px bisque, 0 0 20px bisque;
+
+}
+
+/* ----------section des compétences---------*/
+.content2{
     color: black;
-    overflow: hidden;
-    transition: background 0.4s;
 }
+.content2 p{
+    text-align: center;
+    margin-bottom: 35px;
 
-.no-grid {
-    height: 500px;
-    flex: 1;
-    min-width: 350px;
 }
-
-.footer {
-    min-height: 100px;
+#container3 p{
+    color: black;
+    text-align: center;
+    margin-bottom: 35px;
+}
+#card-container,.card-album{
+ display: flex;
+ flex-direction: row;   
+ column-gap: 20px;
+justify-content: center;
+flex-wrap: wrap;
+row-gap: 40px;
+}
+#card{
     display: flex;
-    align-items: center;
-    margin-top: 50px;
-    justify-content: space-between;
-    padding: 0 100px;
     flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 10px;
+    width: 250px;
+    height: 400px;
+    box-shadow: 2px 2px 10px bisque;
 }
-
-.copyrights {
-    padding-right: 20px;
+.card-head{
+    width: 100vw;
+    height: 52%;
+    border-radius: 10px 10px 0px 0px;
+    color: bisque;
 }
+.card-head img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 0px 0px;
+    background-position: center;
+    background-size: cover;
+    
+}
+.card-head img:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+    border-radius: 10px;
+}
+.card-body{
+    width: 100%;
+    height: 47.8%;
+    border-radius: 0px 0px 10px 10px;
+    color: bisque;
+    text-align: center;
+    align-items: center;
+    background-color:grey;
+    backdrop-filter: blur(1px);
 
-.conditions {
+}
+/*-------section des galéries---------*/
+#container3{
     color: black;
-    text-decoration: none;
-    font-weight: 600;
 }
-
-@media (max-width: 1150px) {
-
-    .header {
-        justify-content: space-between;
-    }
-
-    .burger-container {
-        width: 35px;
-        height: 30px;
-        position: relative;
-    }
-
-    .burger {
-        display: block;
-        height: 3px;
-        width: 30px;
-        background: white;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        transition: background 0.4s;
-    }
-
-    .burger-container.active .burger {
-        background: transparent;
-    }
-
-    .burger::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: white;
-        bottom: 8px;
-        transition: transform 0.4s,
-            bottom 0.4s,
-            background 0.4s;
-    }
-
-    .burger-container.active .burger::before {
-        bottom: 0;
-        transform: rotate(-45deg);
-        background: black;
-    }
-
-    .burger::after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: white;
-        top: 8px;
-        transition: transform 0.4s,
-            top 0.4s background 0.4s;
-    }
-
-    .burger-container.active .burger::after {
-        top: 0;
-        transform: rotate(45deg);
-        background: black;
-    }
-
-    .nav-links {
-        position: absolute;
-        width: 100%;
-        height: 50vh;
-        background: white;
-        left: 0;
-        top: -50vh;
-        transition: top 0.4s ease-in-out;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: flex-start;
-        padding: 0 50px;
-    }
-
-    .nav-links.active {
-        top: 0;
-    }
-
-    .nav-links li {
-        margin: 0;
-    }
-
-    .nav-links a {
-        color: black;
-        font-size: 30px;
-    }
-
-    .delivery-container {
-        flex-direction: column;
-        justify-content: center;
-        padding: 50px;
-    }
-
-    .delivery-container div {
-        margin: 30px;
-    }
-
-    .grid-plants {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .grid {
-        flex: 1;
-        min-width: 350px;
-        height: 500px;
-    }
+.album{
+ display: flex;
+ flex-direction: row;   
+ column-gap: 20px;
+justify-content: center;
+flex-wrap: wrap;
+row-gap: 40px;
 }
+.card1{
+    display: flex;
+    column-gap: 20px;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 10px;
+    width: 250px;
+    height: 400px;
+    box-shadow: 2px 2px 10px bisque;
+    
+}
+.card1 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
 
-@media (max-width: 550px) {
+}
+.card1 img:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+    border-radius: 10px;
 
-    .logo {
-        width: 100px;
-    }
+}
+.container4{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 40px 0;
+    flex-wrap: wrap;
+    column-gap: 20px;
+}
+.video-content ,.video-content1{
+   
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+.video-content video{
+    width: 100%;
+}
+.video-content1 video{
+    width: 100%;
+    
+}
+.content5{
+    margin-top: 40px;
+    max-width: 1200px;
+    height: 250px;
+    background: grey;
+    border-radius: 10px;
 
-    .landing,
-    .header,
-    .best-sales-container,
-    .plants-container,
-    .footer {
-        padding: 0 7%;
-    }
+}
+.info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid bisque ;
+    height: auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: bisque;
+    text-align: center;
+    
+}
+/* Styles par défaut */
 
-    .header {
-        height: 100px;
-    }
 
-    .big-title {
-        font-size: 50px;
-        line-height: 50px;
-    }
-
-    .nav-links a {
-        font-size: 20px;
-    }
-
-    .section-title {
-        font-size: 30px;
-        text-align: center;
-    }
-
-    .plant-box {
-        min-width: 300px;
-    }
-
-    .plant-name,
-    .plant-box::before {
-        font-size: 20px;
-    }
-
-    .plant-price {
+/* Styles pour les écrans de moins de 600px de large */
+@media (max-width: 100px) {
+  body {
+    font-size: 14px;
+    background: #f0f0f0;
+  }
+    #header nav ul {
+        /* Styles par défaut */
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
         font-size: 10px;
     }
-
-}
-
-@media (max-width: 400px) {
-
-    .footer {
-        justify-content: center;
+    #corps {
+        font-size: 18px;
+        margin-bottom: 10px;
+        margin-top: 0px;
     }
 }
+
+
