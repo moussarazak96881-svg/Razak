@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset{
+            width: 400px;
+            margin: auto;
+            border-radius: 10px;
+            block-size: border-box;
+            box-shadow: 3px 3px 5px grey ,-3px -3px 5px grey;
+            background-image: url(..//image/p.jpg);
+            background-size: cover;
+            backdrop-filter: blur(1px);
+        }
+        legend{
+            text-align: center;
+            font-weight: bold;
+            color: red;
+        }
+        .fiel-part{
+            display:grid ;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            row-gap: 20px;
+        }
+        .gend-part{
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+        }
+        label{
+            display: block;
+            color: tomato;
+        }
+        input{
+            outline: none;
+            border-radius: 10px;
+        }
+        .btn-group{
+            margin-top: 30px;
+            float: right;
+            margin-right: 50px;
+        }
+        .btn-group button[type="submit"]{
+            padding: 5px 10px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+         .btn-group button[type="reset"]{
+            padding: 5px 10px;
+            border: none;
+            background-color: #dc3545;
+            color: white;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .btn-group button[type="reset"]:hover{
+            background-color: #4723c8;
+            padding: 15px 15px;
+            transition: 0.6s;
+            color: #dc3545;
+        }
+         .btn-group button[type="submit"]:hover{
+            background-color: #e5e509;
+            padding: 15px 15px;
+            transition: 0.6s;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>
+            Ajout Eleve
+        </legend>
+        <form action="">
+            <div class="fiel-part">
+                <div class="form-group">
+                    <label for="">Prenom</label>
+                    <input type="text" name="" id="">
+                </div>
+                <div class="form-group">
+                    <label for="">Nom</label>
+                    <input type="text" name="" id="">
+                </div>
+                <div class="form-group">
+                    <label for="">Adresse</label>
+                    <input type="text" name="" id="">
+                </div>
+                <div class="form-group">
+                    <label for="">Tel</label>
+                    <input type="text" name="" id="">
+                </div>
+
+                <div class="form-group">
+                    <label for="">Sexe</label>
+                    <div class="gend-part">
+                         <div class="masculin">
+                            <label for="">M</label>
+                            <input type="radio" name="Sexe" value="M">
+                        </div>
+                        <div class="feminin">
+                            <label for="">F</label>
+                            <input type="radio" name="Sexe" value="F">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="">Email</label>
+                    <input type="email" name="" id="">
+                </div>
+            </div>
+            <div class="btn-group">
+                <button type="submit">Ajouter</button>
+                <button type="reset">Annuler</button>
+            </div>
+        </form>
+    </fieldset>
+</body>
+</html>

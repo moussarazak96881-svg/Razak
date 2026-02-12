@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mise en page</title>
+    <style>
+        body{
+            
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        h1{
+            text-align: start;
+            color: #333;
+            margin-top: 80px;
+            padding: 5px;
+            font-size: 90px;
+            text-decoration: line-through;
+            text-shadow: 3px 3px 9px cyan;
+            margin-bottom: 0px;
+        }
+
+        p{
+            font-family: serif;
+            line-height: 1.6;
+            letter-spacing: 12px;
+            line-height: 1.4;
+            margin-top: 1px;
+
+        }
+        #para::first-letter{
+            font-size: 90px;
+            text-shadow: 3px 3px 5px cyan;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 id="titre">Mon titre</h1>
+    </div>
+    <div id="para">
+        <p> L<font color="red"> orem ipsum dolor sit amet consectetur adipisicing elit</font>.<font color="blue"> Maxime omnis quis, pariatur debitis nulla assumenda aperiam eaque doloremque iure doloribus earum distinctio blanditiis veritatis vitae voluptates repudiandae laboriosam. Necessitatibus, quae.</font>
+
+        </p>
+    </div>
+</body>
+</html>

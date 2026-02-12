@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exo grid</title>
+    <style>
+        #wrapper{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            border: 1px solid #000;
+            grid-auto-rows: minmax(100px, auto);
+            text-align: center;
+            
+        }
+        .un {
+            background-color: #f8b400;
+            grid-column: 1 /3;
+            grid-row: 1;
+            
+           
+        }
+        .deux{  
+            background: forestgreen;
+            grid-column: 3 ;
+            grid-row: 1;
+            
+        }
+        .trois {
+            background: #e63946;
+            grid-column: 1 /4;
+            grid-row: 2 / 4;
+        }
+        .quatre {
+            background: #a8dadc;
+            grid-column: 1 ;
+            grid-row: 4;
+        }
+        .cinq {
+            background: #457b9d;
+            grid-column: 2 / 4;
+            grid-row: 4;
+        }
+        .six {
+            background: #1d3557;
+            grid-column: 1 / 4;
+            grid-row: 5;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="un">one </div>
+        <div class="deux">two</div>
+        <div class="trois">three</div>
+        <div class="quatre">fou</div>
+        <div class="cinq">five</div>
+        <div class="six">six</div>
+    </div>
+</body>
+</html>
